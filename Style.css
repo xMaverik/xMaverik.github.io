@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(72, 127, 137);
+    font-family: Arial, sans-serif;
+ }
+
+ h1 {
+    text-align: center;
+    border: 2px solid darkblue;
+ }
+ p {
+    color: darkgreen;
+    font-size: 18px;
+ }
+ img {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    border: 3px solid navy;
+  }
+
+  ul {
+    background-color: #ff0000;
+    padding: 20px 40px;
+    width: 200px;
+    margin: auto;
+}
+
