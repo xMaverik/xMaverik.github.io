@@ -19,9 +19,26 @@ body {
   }
 
   ul {
-    background-color: #ff0000;
-    padding: 20px 40px;
-    width: 200px;
-    margin: auto;
+    background-color: #193047;
+}
+li {
+   background-color: #e7f2fa;
+   border: 2px solid #b3d7ea;
+   border-radius: 20px;
+   padding: 8px 15px;
+   margin-bottom: 5px;
+   transition: color 0.2s ease, transform 0.2s ease, background-color 0.5s ease;
 }
 
+ul {
+   list-style-type: none;
+   margin-bottom: 20px;
+   padding: 20px;
+   border-radius: 20px;
+}
+
+li:hover {
+   color: #3498db;
+   transform: translateX(5px);
+   background-color: #fffc94;
+}
