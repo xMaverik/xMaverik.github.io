@@ -7,19 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="code-container">
-        <code><span class="keyword">def</span> <span class="function">draw_cloud</span>(<span class="parameter">t</span>, <span class="parameter">x</span>, <span class="parameter">y</span>, <span class="parameter">size</span>=<span class="string">1.0</span>):
-<span class="comment">"""Draw a cloud made of multiple overlapping circles"""</span>
-<span class="function">jump_to</span>(<span class="parameter">t</span>, <span class="parameter">x</span>, <span class="parameter">y</span>)
-<span class="parameter">t</span>.<span class="function">pencolor</span>(<span class="string">"white"</span>)
+   <div class="code-container">
+    <code>
+        <span class="keyword">def</span> <span class="function">draw_polygon</span>(<span class="parameter">t</span>, <span class="parameter">sides</span>, <span class="parameter">size</span>, <span class="parameter">fill_color</span>=<span class="string">None</span>):<br>
+        &nbsp;&nbsp;<span class="comment">"""Draw a regular polygon with given number of sides"""</span><br>
+        &nbsp;&nbsp;<span class="keyword">if</span> <span class="parameter">fill_color</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameter">t</span>.<span class="function">fillcolor</span>(<span class="parameter">fill_color</span>)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameter">t</span>.<span class="function">begin_fill</span>()<br>
+        &nbsp;&nbsp;<span class="parameter">angle</span> = <span class="string">360</span> / <span class="parameter">sides</span><br>
+        &nbsp;&nbsp;<span class="keyword">for</span> <span class="parameter">_</span> <span class="keyword">in</span> <span class="function">range</span>(<span class="parameter">sides</span>):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameter">t</span>.<span class="function">forward</span>(<span class="parameter">size</span>)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameter">t</span>.<span class="function">right</span>(<span class="parameter">angle</span>)<br>
+        &nbsp;&nbsp;<span class="keyword">if</span> <span class="parameter">fill_color</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameter">t</span>.<span class="function">end_fill</span>()
+    </code>
+</div>
 
-<span class="comment"># Draw multiple overlapping circles to form a cloud</span>
-<span class="parameter">positions</span> = [(<span class="string">0</span>, <span class="string">0</span>), (<span class="parameter">size</span> * <span class="string">15</span>, <span class="parameter">size</span> * <span class="string">10</span>), (<span class="parameter">size</span> * <span class="string">30</span>, <span class="string">0</span>), 
-            (<span class="parameter">size</span> * <span class="string">45</span>, <span class="parameter">size</span> * <span class="string">5</span>), (<span class="parameter">size</span> * <span class="string">60</span>, <span class="string">0</span>)]
-
-<span class="keyword">for</span> <span class="parameter">pos_x</span>, <span class="parameter">pos_y</span> <span class="keyword">in</span> <span class="parameter">positions</span>:
-    <span class="function">jump_to</span>(<span class="parameter">t</span>, <span class="parameter">x</span> + <span class="parameter">pos_x</span>, <span class="parameter">y</span> + <span class="parameter">pos_y</span>)
-    <span class="function">draw_circle</span>(<span class="parameter">t</span>, <span class="parameter">size</span> * <span class="string">20</span>, <span class="string">"white"</span>)</code>
-    </div>   
 </body>
 </html>
