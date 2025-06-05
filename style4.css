@@ -1,0 +1,196 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Background Image with Transparency */
+/* need position: fixed; and top: 0; left: 0; */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4d7ea8;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #4d7ea8;
+    margin: 15px 0;
+}
+
+/* Link Styles */
+a {
+    color: #4d7ea8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #8e44ad;
+}
+
+
+/* Section Styles */
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #3498db;
+    margin: 15px 0 10px 0;
+}
+
+/* Lists - adapted from the provided styles.css */
+li {
+    margin-bottom: 5px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+li:hover {
+    color: #3498db;
+    transform: translateX(5px);
+}
+
+/* Skills-like styling for the "What I've Learned" list */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+li {
+    flex: 1 1;
+    background-color: #e7f2fa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #b3d7ea;
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: rgba(44, 62, 80, 0.1);
+    border-radius: 8px;
+}
+
+/* Styles for code section */
+.code-container {
+    background-color: #2d3748;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+    border-left: 4px solid #4299e1;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e2e8f0;
+    display: block;
+    white-space: pre;
+}
+
+.keyword { color: #f56565; }
+.function { color: #68d391; }
+.string { color: #fbb6ce; }
+.comment { color: #a0aec0; font-style: italic; }
+.parameter { color: #90cdf4; }
+
+/* Styles for the turtle graphics scene section */
+.scene-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scene-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.scene-image:hover {
+    transform: scale(1.02);
+}
+
+.scene-description {
+    font-style: italic;
+    color: #666;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+}

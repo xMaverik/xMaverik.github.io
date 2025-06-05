@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style4.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="code-container">
+        <code><span class="keyword">def</span> <span class="function">draw_cloud</span>(<span class="parameter">t</span>, <span class="parameter">x</span>, <span class="parameter">y</span>, <span class="parameter">size</span>=<span class="string">1.0</span>):
+<span class="comment">"""Draw a cloud made of multiple overlapping circles"""</span>
+<span class="function">jump_to</span>(<span class="parameter">t</span>, <span class="parameter">x</span>, <span class="parameter">y</span>)
+<span class="parameter">t</span>.<span class="function">pencolor</span>(<span class="string">"white"</span>)
+
+<span class="comment"># Draw multiple overlapping circles to form a cloud</span>
+<span class="parameter">positions</span> = [(<span class="string">0</span>, <span class="string">0</span>), (<span class="parameter">size</span> * <span class="string">15</span>, <span class="parameter">size</span> * <span class="string">10</span>), (<span class="parameter">size</span> * <span class="string">30</span>, <span class="string">0</span>), 
+            (<span class="parameter">size</span> * <span class="string">45</span>, <span class="parameter">size</span> * <span class="string">5</span>), (<span class="parameter">size</span> * <span class="string">60</span>, <span class="string">0</span>)]
+
+<span class="keyword">for</span> <span class="parameter">pos_x</span>, <span class="parameter">pos_y</span> <span class="keyword">in</span> <span class="parameter">positions</span>:
+    <span class="function">jump_to</span>(<span class="parameter">t</span>, <span class="parameter">x</span> + <span class="parameter">pos_x</span>, <span class="parameter">y</span> + <span class="parameter">pos_y</span>)
+    <span class="function">draw_circle</span>(<span class="parameter">t</span>, <span class="parameter">size</span> * <span class="string">20</span>, <span class="string">"white"</span>)</code>
+    </div>   
+</body>
+</html>
